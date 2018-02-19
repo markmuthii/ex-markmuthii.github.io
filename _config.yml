@@ -1,0 +1,20 @@
+title:             Mark Muthii
+email:             contact@markmuthii.com
+description:       Developer. Programmer. Chronic Overthinker
+author:            Mark Muthii
+baseurl:           ""
+url:               ""
+permalink:         :title
+
+# Social Profiles
+twitter_username:  markmuthii7
+github_username:   markmuthii
+facebook_username: MarkMuthiiM
+
+# Build settings
+markdown:          kramdown
+paginate:          10
+paginate_path:     "/articles/page:num/"
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
