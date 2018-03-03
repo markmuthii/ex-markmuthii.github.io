@@ -1,12 +1,12 @@
 ---
-layout: default
+layout: default_home
 ---
 
 <!-- Page Header -->
 {% if page.background %}
-  <header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
+  <header class="masthead no-margin-bottom" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
   {% else %}
-  <header class="masthead">
+  <header class="masthead no-margin-bottom">
     {% endif %}
     <div class="overlay"></div>
     <div class="container">
@@ -17,20 +17,24 @@ layout: default
             {% if site.description %}
               <span class="subheading">{{ site.description }}</span>
             {% endif %}
+            <div style="margin-top: 50px">
+              <a class="btn btn-primary" href="{{"/articles" | relative_url }}">Read My Posts &rarr;</a>
+            </div>
           </div>
+          
         </div>
       </div>
     </div>
   </header>
 
-  <div class="container">
+  <!-- <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
 
-        {{ content }}
+        {{ content }} -->
 
         <!-- Home Post List -->
-        {% for post in site.posts limit : 5 %}
+        <!-- {% for post in site.posts limit : 5 %}
 
           <article class="post-preview">
             <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
@@ -54,12 +58,13 @@ layout: default
           <hr>
 
         {% endfor %}
-
+ -->
         <!-- Pager -->
-        <div class="clearfix">
+        <!-- <div class="clearfix">
           <a class="btn btn-primary float-right" href="{{"/articles" | relative_url }}">View All Posts &rarr;</a>
         </div>
 
       </div>
     </div>
   </div>
+ -->

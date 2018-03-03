@@ -10,6 +10,7 @@ p {
   margin: 30px 0;
   a {
     text-decoration: underline;
+    color: $gold;
   }
 }
 
@@ -37,9 +38,9 @@ blockquote {
   padding-left: 15px;
   font-style: italic;
   color: $gray-600;
-  .author{
+  span.author{
     display: block;
-    position: absolute;
+    position: relative;
     font-size: 0.8em;
     text-align: right;
   }

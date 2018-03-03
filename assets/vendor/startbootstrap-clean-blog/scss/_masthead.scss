@@ -57,13 +57,13 @@ header.masthead {
       display: block;
     }
     .subheading {
-      font-size: 24px;
+      font-size: 20px;
       font-weight: 600;
       margin: 10px 0 30px;
       @include sans-serif-font;
     }
     .meta {
-      font-size: 20px;
+      font-size: 16px;
       font-weight: 300;
       font-style: italic;
       @include serif-font;
@@ -73,11 +73,15 @@ header.masthead {
     }
     @media only screen and (min-width: 768px) {
       h1 {
-        font-size: 55px;
+        font-size: 45px;
       }
       .subheading {
-        font-size: 30px;
+        font-size: 25px;
       }
     }
   }
+}
+
+header.no-margin-bottom {
+  margin-bottom: 0;
 }
