@@ -25,12 +25,26 @@ h6 {
 }
 
 a {
-  color: $gray-900;
+  text-decoration: underline;
+  color: $primary;
   @include transition-all;
   &:focus,
   &:hover {
+    text-decoration: none;
     color: $primary;
   }
+  .fa-stack {
+    color: $gray-900;
+    &:focus,
+    &:hover {
+      text-decoration: none;
+      color: $primary;
+    }
+  }
+}
+
+.navbar-brand, .nav-link {
+  text-decoration: none;
 }
 
 blockquote {

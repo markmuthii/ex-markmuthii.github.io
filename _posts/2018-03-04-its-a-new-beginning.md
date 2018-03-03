@@ -22,3 +22,12 @@ If you ever need to reach me, just hit that contact button up in the menu, fill 
 
 Happy reading! Looking forward to seeing where this leads...
 
+But real quick before I go. Here are some interesting facts about this blog:
+<ul>
+  <li>It is built using Github pages and Jekyll, the static site generator</li>
+  <li>All the site file are hosted on Github</li>
+  <li>It is completely free (that's right. I didn't pay a dime. Not even for the domain)</li>
+  <li>At the time of writing this, I am using the Clean Blog Jekyll theme created by <a href="http://davidmiller.io">David Miller</a>. (This will change in good time, as I plan to create my own theme)</li>
+  <li>Setting it up was a pain in the butt (first time interacting with the Ruby development kit, Jekyll, liquid). I didn't know 80% of what I was doing. But I got it done</li>
+</ul>
+
