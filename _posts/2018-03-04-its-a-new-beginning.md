@@ -14,9 +14,7 @@ So, about this blog. In my daily escapades, I encounter and learn a lot of thing
 
 Disclaimer: I am not a good writer (yet:)). That said, this will not be a perfect blog. I will make mistakes, no doubt. But those mistakes will not outway the informational stuff that I hope to share with you, so connect two and two where something little doesn't make sense, or where there's a typo, and read on.
 
-Most of the posts I write will be on `programming`. But ocassionally, I will post non-programming articles (so relax non-techie, I got you)
-
-```programming```
+Most of the posts I write will be on `programming`. But ocassionally, I will post non-programming articles (so don't leave just yet, non-techie).
 
 One more thing is that, this is my personal project, using which I am learning ```Jekyll```, and the templating language ```liquid```. What that means is that, there's a high likelihood that one or more things will seem different (or completely broken) once in a while. Just ignore it for that time, and read what you can.
 

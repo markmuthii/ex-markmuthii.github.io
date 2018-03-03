@@ -25,3 +25,10 @@
   font-size: 16px;
   padding: 25px 35px;
 }
+
+code {
+  color: $primary;
+  border: $gray-600 2px solid;
+  border-radius: 5px;
+  padding: 2px 5px;
+}
