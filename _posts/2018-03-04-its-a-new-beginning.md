@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Here's to a New Beginning"
-subtitle: "and thus, my writing journey begun"
+subtitle: "And thus, my writing journey begun"
 date:   2018-03-04
 background: '/img/posts/beginning.jpg'
 author: Mark Muthii

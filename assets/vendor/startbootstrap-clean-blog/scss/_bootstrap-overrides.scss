@@ -11,6 +11,7 @@
   &:hover,
   &:focus,
   &:active {
+    outline: none !important;
     border: none !important;
   }
 }
@@ -23,7 +24,7 @@
   &:active {
     color: $white;
     background-color: darken($primary, 7.5) !important;
-    border: none !important;
+    outline: none !important;
   }
 }
 

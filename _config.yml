@@ -3,13 +3,14 @@ email:             contact@markmuthii.com
 description:       Developer. Programmer. Chronic Overthinker
 author:            Mark Muthii
 baseurl:           ""
-url:               ""
+url:               "http://www.markmuthii.me"
 permalink:         :title
 
 # Social Profiles
 twitter_username:  markmuthii7
 github_username:   markmuthii
 facebook_username: MarkMuthiiM
+ig_username:       markmuthii
 
 # Build settings
 markdown:          kramdown
@@ -18,3 +19,9 @@ paginate_path:     "/articles/page:num/"
 plugins:
   - jekyll-feed
   - jekyll-paginate
+
+#Disqus Comments
+disqus:
+  # Leave shortname blank to disable comments site-wide.
+  # Disable comments for any post by adding `comments: false` to that post's YAML Front Matter.
+  shortname:        markmuthii

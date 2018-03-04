@@ -43,6 +43,12 @@ a {
   }
 }
 
+a.btn {
+  &:active {
+    outline: none;
+  }
+}
+
 .navbar-brand, .nav-link {
   text-decoration: none;
 }
