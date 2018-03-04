@@ -23,6 +23,7 @@
   &:active {
     color: $white;
     background-color: darken($primary, 7.5) !important;
+    border: none !important;
   }
 }
 
