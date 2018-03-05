@@ -17,10 +17,6 @@ description: "A collection of my thoughts in one place"
       {% else %}
       <h3 class="post-subtitle" >{{ post.excerpt | strip_html | truncatewords: 15 }}...</h3>
     {% endif %}
-
-    <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}" class="btn btn-primary read">Read article &rarr;</a>
-
-
     
     <!-- <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}...</h3> -->
     <p class="post-meta">Posted by
@@ -30,6 +26,8 @@ description: "A collection of my thoughts in one place"
         {{ site.author }}
       {% endif %}
       on {{ post.date | date: '%B %d, %Y' }}</p>
+
+      <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}" class="btn btn-primary read">Read article &rarr;</a>
   </article>
 
   <hr>
