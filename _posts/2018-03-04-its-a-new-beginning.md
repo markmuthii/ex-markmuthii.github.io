@@ -6,6 +6,7 @@ date:   2018-03-04
 background: '/img/posts/beginning.jpg'
 author: Mark Muthii
 ---
+
 Hello World!
 
 As you might already know, I'm Mark Muthii, and this is my personal blog site. By day, I am a student, and by night, I am a programming freak who spends his hours banging on the keyboard keys.
@@ -24,8 +25,8 @@ Happy reading! Looking forward to seeing where this leads...
 
 But real quick before I go. Here are some interesting facts about this blog:
 <ul>
-  <li>It is built using Github pages and Jekyll, the static site generator</li>
-  <li>All the site file are hosted on Github</li>
+  <li>It is built using <a href="https://pages.github.com" target="_blank">Github pages</a> and <a href="https://jekyllrb.com" target="_blank">Jekyll</a>, the static site generator</li>
+  <li>All the site files are hosted on <a href="https://github.com" target="_blank">Github</a></li>
   <li>It is completely free (that's right. I didn't pay a dime. Not even for the domain)</li>
   <li>At the time of writing this, I am using the Clean Blog Jekyll theme created by <a href="http://davidmiller.io">David Miller</a>. (This will change in good time, as I plan to create my own theme)</li>
   <li>Setting it up was a pain in the butt (first time interacting with the Ruby development kit, Jekyll, liquid). I didn't know 80% of what I was doing. But I got it done</li>

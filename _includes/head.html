@@ -10,6 +10,17 @@
     {% else %}{{ site.title | escape }}{% endif %}
   </title>
 
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" value="summary">
+
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url"           content="{{ page.url | prepend: site.baseurl }}" />
+  <meta property="og:type"          content="{% if page.layout == post %}article{% else %}website{% endif %}" />
+  <meta property="og:title"         content="{{page.title | default: site.title}}{% if page.title %} | {{ site.title }}{% endif %}" />
+  <meta property="og:description"   content="{{ page.subtitle | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}" />
+  <meta property="og:image"         content="{{ page.background | prepend: site.baseurl | replace: '//', '/' }}" />
+  <!-- End Facebook Meta Tags -->
+
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
   
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>

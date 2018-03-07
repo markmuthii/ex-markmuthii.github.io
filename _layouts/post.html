@@ -36,6 +36,12 @@ layout: default
 
       {{ content }}
 
+      <!-- <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | prepend: site.baseurl }}" target="_blank">
+  Share on <span class="fa fa-facebook"></span>
+      </a> -->
+
+      {% include social-share.html%}
+
       <hr>
 
       <div class="clearfix">
