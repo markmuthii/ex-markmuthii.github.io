@@ -5,6 +5,7 @@ subtitle: "Guide to creating and running a java program through the terminal"
 date:   2018-03-11
 background: '/img/posts/java2.jpg'
 author: Mark Muthii
+category: programming
 description: "Ever since I started learning to code, no language has been as fascinating to me as `Javascript`, and I would wish to forever code only in it. However, due to school, I have had to interact with other programming languages. Last semester, the programming unit was covered in `C++`."
 ---
 
