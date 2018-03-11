@@ -18,10 +18,10 @@
   <meta property="og:type"          content="article" />
   <meta property="og:title"         content="{{page.title | default: site.title}}{% if page.title %} | {{ site.title }}{% endif %}" />
   <meta property="og:description"   content="{{ page.description | strip_html | normalize_whitespace | truncate: 160 | escape }}" />
-  <meta property="og:image"         content="{{"/img/fav.png" | relative_url }}"/>
+  <meta property="og:image"         content="{{"/img/fav.png" | prepend: site.url }}"/>
   <!-- End Facebook Meta Tags -->
-  <meta itemprop="image" content="{{"/img/fav.png" | relative_url }}">
-  <meta property="thumbnailURl" content="{{"/img/fav.png" | relative_url }}"/>
+  <meta itemprop="image" content="{{"/img/fav.png" | prepend: site.url }}">
+  <meta property="thumbnailURl" content="{{"/img/fav.png" | prepend: site.url }}"/>
   <meta name="description" content="{{ page.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
   <meta name="date" content="{{ page.date | default: 2018-03-04}}">
   <meta name="category" content="{{ page.category }}">
