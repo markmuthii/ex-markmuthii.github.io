@@ -145,7 +145,7 @@ For this part, please proceed with **caution**.
 2. Click the Advanced system settings link.
 3. Click Environment Variables. In the section System Variables, find the PATH environment variable and select it. Click Edit.
 4. In the Edit System Variable window, specify the value of the PATH environment variable: **Append**, ie, add to the end of the list, the following line: `;C:\Program Files\Java\jdk1.8.0_161\bin` _(use the appropriate path to where your version of the JDK is installed)_
-5. Click OK on the path edit box and OK on the Ennvironment Variables box.
+5. Click OK on the path edit box and OK on the Environment Variables box.
 
 ##### On Windows 7
 1. From the desktop, right click the Computer icon.
@@ -153,7 +153,7 @@ For this part, please proceed with **caution**.
 3. Click the Advanced system settings link.
 4. Click Environment Variables. In the section System Variables, find the PATH environment variable and select it. Click Edit.
 4. In the Edit System Variable window, specify the value of the PATH environment variable: **Append**, ie, add to the end of the list, the following line: `;C:\Program Files\Java\jdk1.8.0_161\bin` _(use the appropriate path to where your version of the JDK is installed)_
-5. Click OK on the path edit box and OK on the Ennvironment Variables box.
+5. Click OK on the path edit box and OK on the Environment Variables box.
 
 <img class="img-fluid" src="../img/posts/var.png" alt="Command Prompt"><span class="caption text-muted">My Variable Settings Screen</span>
 
