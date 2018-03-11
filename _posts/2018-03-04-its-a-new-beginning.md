@@ -5,6 +5,7 @@ subtitle: "And thus, my writing journey begun"
 date:   2018-03-04
 background: '/img/posts/beginning.jpg'
 author: Mark Muthii
+description: "Hello World! As you might already know, I'm Mark Muthii, and this is my personal blog site. By day, I am a student, and by night, I am a programming freak who spends his hours banging on the keyboard keys."
 ---
 
 Hello World!
@@ -31,4 +32,6 @@ But real quick before I go. Here are some interesting facts about this blog:
   <li>At the time of writing this, I am using the Clean Blog Jekyll theme created by <a href="http://davidmiller.io">David Miller</a>. (This will change in good time, as I plan to create my own theme)</li>
   <li>Setting it up was a pain in the butt (first time interacting with the Ruby development kit, Jekyll, liquid). I didn't know 80% of what I was doing. But I got it done</li>
 </ul>
+
+<hr>
 
