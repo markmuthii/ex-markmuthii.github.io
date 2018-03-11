@@ -33,7 +33,7 @@ Okay, enough talk, let's get down to it.
 
 To get started, first check whether Java Development Kit is installed in your machine.
 
-To do that, open the command prompt (terminal) by pressing `Windows+R` and type `cmd` in the box that pops up. lick OK.
+To do that, open the command prompt (terminal) by pressing `Windows+R` and typing `cmd` in the box that pops up. Click OK.
 
 <img class="img-fluid" src="../img/posts/run.png" alt="Run Window">
 
