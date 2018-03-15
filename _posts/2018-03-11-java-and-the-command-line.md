@@ -9,6 +9,7 @@ category: programming
 description: "Ever since I started learning to code, no language has been as fascinating to me as `Javascript`, and I would wish to forever code only in it. However, due to school, I have had to interact with other programming languages. Last semester, the programming unit was covered in `C++`."
 ---
 
+
 Ever since I started learning to code, no language has been as fascinating to me as `Javascript`, and I would wish to forever code only in it.
 
 However, due to school, I have had to interact with other programming languages. Last semester, the programming unit was covered in `C++`. C++ was a great experience, but I have no particular interest in going back to it.

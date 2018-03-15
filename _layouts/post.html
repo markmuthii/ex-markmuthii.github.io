@@ -1,5 +1,5 @@
 ---
-layout: default_post
+layout: default
 ---
 
 <!-- Page Header -->
@@ -32,15 +32,14 @@ layout: default_post
 
 <div class="container">
   <div class="row">
-    <div class="col-lg-8 col-md-10 mx-auto">
+    <div class="col-lg-8 col-md-10 mx-auto"> 
+      <div id="article-section">
 
-      {{ content }}
+        {{ content }}
 
-      <!-- <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | prepend: site.baseurl }}" target="_blank">
-  Share on <span class="fa fa-facebook"></span>
-      </a> -->
+        {% include social-share.html%}
 
-      {% include social-share.html%}
+      </div>
 
       <hr>
 

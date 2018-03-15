@@ -10,9 +10,9 @@ $gray-600: #868e96 !default;
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
-$black:    #000 !default;
 
 $gold:				#8C6900 !default;
+$black:    		#000 !default;
 $blue:    		#007bff !default;
 $indigo:  		#6610f2 !default;
 $purple:  		#6f42c1 !default;
@@ -23,10 +23,10 @@ $yellow:  		#ffc107 !default;
 $green:   		#28a745 !default;
 $teal:    		#0085A1 !default;
 $cyan:    		#17a2b8 !default;
-$custom-pri: 	$gold !default;
 $bg-code:			#272822 !default;
 $code: 				#e6db74 !default;
 
+$custom-pri: 		$gold !default;
 $primary:       $custom-pri !default;
 $secondary:     $gray-600 !default;
 $success:       $green !default;
@@ -35,3 +35,4 @@ $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
 $dark:          $gray-800 !default;
+$progress: 			$primary !default;
