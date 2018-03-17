@@ -2,7 +2,7 @@
 layout: null
 ---
 
-var CACHE_NAME = 'mark-muthii-cache-v4.2';
+var CACHE_NAME = 'mark-muthii-cache-v4.5';
 
 var cacheFiles = [
 
@@ -11,6 +11,9 @@ var cacheFiles = [
   '/assets/main.css',
   '/assets/vendor/css/prism.css',
   'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
+  'https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800',
+  'https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic',
+  'https://fonts.gstatic.com/s/lora/v12/0QIgMX1D_JOuO7HeNtxumg.woff2',
 
   // JS Files
   '/assets/vendor/jquery/jquery.min.js',
@@ -23,11 +26,9 @@ var cacheFiles = [
 
   // Images
   {% for file in site.static_files %}
-
   	{% if file.path contains "/img" %}
   		'{{ file.path }}',
 		{% endif %}
-
   {% endfor %}
   '/fav.png',
   '/favicon.ico',
@@ -44,16 +45,36 @@ var cacheFiles = [
 
 ];
 
-
+self.addEventListener('foreignfetch', function(event) {
+	event.respondWith(
+		fetch(event.request)
+		.then(function(response) {
+			return {
+				response: response,
+				origin: event.origin,
+				headers: ['Content-Type']
+			}
+		})
+	);
+});
 
 self.addEventListener('install', function(event) {
-	event.skipWaiting();
+	
   // Perform install steps
   event.waitUntil(
     caches.open(CACHE_NAME)
     .then(function(cache) {
       console.log('Opened cache');
       return cache.addAll(cacheFiles);
+    })
+    .then(function(event){
+    	return self.skipWaiting();
+    })
+    .then(function(event) {
+    	event.registerForeignFetch({
+				scopes:['/'],
+				origins:['*'] // or simply '*' to allow all origins
+			});
     })
   );
 });
