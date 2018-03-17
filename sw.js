@@ -2,7 +2,7 @@
 layout: null
 ---
 
-const CACHE_NAME = 'mark-muthii-cache-v4.2';
+var CACHE_NAME = 'mark-muthii-cache-v4.2';
 
 var cacheFiles = [
 
@@ -47,14 +47,13 @@ var cacheFiles = [
 
 
 self.addEventListener('install', function(event) {
+	event.skipWaiting();
   // Perform install steps
   event.waitUntil(
     caches.open(CACHE_NAME)
     .then(function(cache) {
       console.log('Opened cache');
       return cache.addAll(cacheFiles);
-    }).then(function(event){
-    	return self.skipWaiting();
     })
   );
 });
