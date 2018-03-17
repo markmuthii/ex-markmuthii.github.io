@@ -2,7 +2,7 @@
 layout: null
 ---
 
-const CACHE_NAME = 'mark-muthii-cache-v1';
+const CACHE_NAME = 'mark-muthii-cache-v4.2';
 
 var cacheFiles = [
 
@@ -21,12 +21,16 @@ var cacheFiles = [
   '/assets/vendor/js/custom.js',
   '/assets/vendor/startbootstrap-clean-blog/js/jqBootstrapValidation.js',
 
-  // Page Background Images
-  '/img/bg-about.jpg',
-  '/img/bg-contact.jpg',
-  '/img/bg-index.jpg',
-  '/img/bg-post.jpg',
-  'fav.png',
+  // Images
+  {% for file in site.static_files %}
+
+  	{% if file.path contains "/img" %}
+  		'{{ file.path }}',
+		{% endif %}
+
+  {% endfor %}
+  '/fav.png',
+  '/favicon.ico',
 
   // Pages
   {% for page in site.html_pages %}
@@ -40,14 +44,17 @@ var cacheFiles = [
 
 ];
 
+
+
 self.addEventListener('install', function(event) {
-	self.skipWaiting();
   // Perform install steps
   event.waitUntil(
     caches.open(CACHE_NAME)
     .then(function(cache) {
       console.log('Opened cache');
       return cache.addAll(cacheFiles);
+    }).then(function(event){
+    	return self.skipWaiting();
     })
   );
 });
@@ -56,28 +63,29 @@ self.addEventListener("activate", function(event){
   event.waitUntil(
     caches.keys().then(function(cacheNames){
       return Promise.all(
-        cacheNames.filter(function(cacheName){
-          return cacheName.startsWith("mark-muthii-cache-")
-            && cacheName != CACHE_NAME;
-        }).map(function(cacheName){
-          return cache.delete(cacheName);
+        cacheNames.map(function(cacheName){
+        	if(cacheName.startsWith("mark-muthii-cache-") && cacheName !== CACHE_NAME){
+        		console.log('[ServiceWorker] Removing Cached Files from Cache - ', cacheName);
+        		return caches.delete(cacheName);
+        	}else{
+        		console.log('Else- ', cacheName);
+        	}
         })
-      )
+      );
     })
-  )
+  );
 });
 
 self.addEventListener('fetch', function(event) {
   event.respondWith(
     caches.match(event.request)
-      .then(function(response) {
-        if (response) {
-          console.log('[*] Serving cached: ' + event.request.url);
-          return response;
-        }
-        console.log('[*] Fetching: ' + event.request.url);
-        return fetch(event.request);
+    .then(function(response) {
+      if (response) {
+        console.log('[*] Serving cached: ' + event.request.url);
+        return response;
       }
-    )
+      console.log('[*] Fetching: ' + event.request.url);
+      return fetch(event.request);
+    })
   );
 });

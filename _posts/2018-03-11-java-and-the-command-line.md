@@ -36,11 +36,11 @@ To get started, first check whether Java Development Kit is installed in your ma
 
 To do that, open the command prompt (terminal) by pressing `Windows+R` and typing `cmd` in the box that pops up. Click OK.
 
-<img class="img-fluid" src="../img/posts/run.png" alt="Run Window">
+<img class="img-fluid" src="../img/posts/run.jpg" alt="Run Window">
 
 The command line should open:
 
-<img class="img-fluid" src="../img/posts/cmd1.png" alt="Command Prompt">
+<img class="img-fluid" src="../img/posts/cmd1.jpg" alt="Command Prompt">
 
 Type the following command:
 
@@ -48,7 +48,7 @@ Type the following command:
 
 If the JDK is installed, you should get something like this:
 
-<img class="img-fluid" src="../img/posts/cmd2.png" alt="Command Prompt">
+<img class="img-fluid" src="../img/posts/cmd2.jpg" alt="Command Prompt">
 
 Alternatively, type:
 
@@ -92,7 +92,7 @@ _`cd` is used to 'change directory' into the specified folder._
 
 The sandbox folder should now be your working directory.
 
-<img class="img-fluid" src="../img/posts/cmd3.png" alt="Command Prompt">
+<img class="img-fluid" src="../img/posts/cmd3.jpg" alt="Command Prompt">
 
 To view the contents of a folder, the `ls` command is used _(if running Windows 8 or 10, use the `dir` command)_
 
@@ -156,7 +156,7 @@ For this part, please proceed with **caution**.
 4. In the Edit System Variable window, specify the value of the PATH environment variable: **Append**, ie, add to the end of the list, the following line: `;C:\Program Files\Java\jdk1.8.0_161\bin` _(use the appropriate path to where your version of the JDK is installed)_
 5. Click OK on the path edit box and OK on the Environment Variables box.
 
-<img class="img-fluid" src="../img/posts/var.png" alt="Command Prompt"><span class="caption text-muted">My Variable Settings Screen</span>
+<img class="img-fluid" src="../img/posts/var.jpg" alt="Command Prompt"><span class="caption text-muted">My Variable Settings Screen</span>
 
 For the new settings to take effect, restart the terminal.
 
