@@ -5,3 +5,5 @@ Gemfile.lock
 *.gem
 sample_post
 drafts
+test.html
+tls
