@@ -2,7 +2,7 @@
 layout: null
 ---
 
-var CACHE_NAME = 'mark-muthii-cache-v4.5';
+var CACHE_NAME = 'mark-muthii-cache-v1';
 
 var cacheFiles = [
 
