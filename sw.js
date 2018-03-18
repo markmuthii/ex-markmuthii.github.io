@@ -45,36 +45,13 @@ var cacheFiles = [
 
 ];
 
-self.addEventListener('foreignfetch', function(event) {
-	event.respondWith(
-		fetch(event.request)
-		.then(function(response) {
-			return {
-				response: response,
-				origin: event.origin,
-				headers: ['Content-Type']
-			}
-		})
-	);
-});
-
 self.addEventListener('install', function(event) {
-	
   // Perform install steps
   event.waitUntil(
     caches.open(CACHE_NAME)
     .then(function(cache) {
       console.log('Opened cache');
       return cache.addAll(cacheFiles);
-    })
-    .then(function(event){
-    	return self.skipWaiting();
-    })
-    .then(function(event) {
-    	event.registerForeignFetch({
-				scopes:['/'],
-				origins:['*'] // or simply '*' to allow all origins
-			});
     })
   );
 });
