@@ -59,16 +59,31 @@ self.addEventListener('install', (event)=>{
 	);
 });
 
+// self.addEventListener('fetch', function(event) {
+//   event.respondWith(
+//     fetch(event.request).catch(function() {
+//       return caches.match(event.request).then(function(response) {
+//         if (response) {
+//           return response;
+//         } else if (event.request.headers.get('accept').includes('text/html')) {
+//           return caches.match('/offline-index.html');
+//         }
+//       });
+//     })
+//   );
+// });
+
+
 self.addEventListener('fetch', function(event) {
   event.respondWith(
-    fetch(event.request).catch(function() {
-      return caches.match(event.request).then(function(response) {
-        if (response) {
-          return response;
-        } else if (event.request.headers.get('accept').includes('text/html')) {
-          return caches.match('/offline-index.html');
-        }
-      });
+    caches.match(event.request)
+    .then(function(response) {
+      if (response) {
+        console.log('[*] Serving cached: ' + event.request.url);
+        return response;
+      }
+      console.log('[*] Fetching: ' + event.request.url);
+      return fetch(event.request);
     })
   );
 });
