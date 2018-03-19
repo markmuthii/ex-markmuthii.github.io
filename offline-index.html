@@ -1,0 +1,21 @@
+---
+layout: default_home
+---
+
+{% if page.background %}
+  <header class="masthead no-margin-bottom" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
+{% else %}
+  <header class="masthead no-margin-bottom">
+{% endif %}
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="page-heading">
+            <h1>{{ site.title }}</h1>
+            <h4>Sorry, but you are offline</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>

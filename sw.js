@@ -1,12 +1,35 @@
 ---
 layout: null
 ---
+//lazy script for simplifying the add to cache event, by Tal Alter (www.talalter.com/adderall)
+importScripts('https://cdnjs.cloudflare.com/ajax/libs/cache.adderall/1.0.0/cache.adderall.js');
+// cache version - change it with every change in the static files
+var CACHE_NAME = 'mark-muthii-v2';
+// files that keep changing. Fetched from the network with each sw update
+var mutableFiles = [
+	'/articles/',
 
-var CACHE_NAME = 'mark-muthii-cache-v1';
+];
+// static files. Fetched from cache, if one is added, it is fetched from network
+var staticFiles = [
+	// images stored in img folder only
+	{% for file in site.static_files %}
+		{% if file.path contains '/img' %}
+			{% if file.path contains '/assets'%}
+			{% else %}
+				'{{ file.path }}',
+			{% endif %}
+		{% endif %}
+	{% endfor %}
+	'/favicon.ico',
+	'/fav.png',
 
-var cacheFiles = [
+	// blog posts
+	{% for post in site.posts %}
+		'{{ post.url }}',
+	{% endfor %}
 
-  // Stylesheets
+	// Stylesheets
   '/assets/vendor/bootstrap/css/bootstrap.min.css',
   '/assets/main.css',
   '/assets/vendor/css/prism.css',
@@ -24,65 +47,43 @@ var cacheFiles = [
   '/assets/vendor/js/custom.js',
   '/assets/vendor/startbootstrap-clean-blog/js/jqBootstrapValidation.js',
 
-  // Images
-  {% for file in site.static_files %}
-  	{% if file.path contains "/img" %}
-  		'{{ file.path }}',
-		{% endif %}
-  {% endfor %}
-  '/fav.png',
-  '/favicon.ico',
-
-  // Pages
-  {% for page in site.html_pages %}
-	  '{{ page.url }}',
-  {% endfor %}
-
-	// Blog posts
-  {% for post in site.posts %}
-  	'{{ post.url }}',
-	{% endfor %}
-
+	'/contact',
+	'/'
 ];
 
-self.addEventListener('install', function(event) {
-  // Perform install steps
-  event.waitUntil(
-    caches.open(CACHE_NAME)
-    .then(function(cache) {
-      console.log('Opened cache');
-      return cache.addAll(cacheFiles);
-    })
-  );
-});
-
-self.addEventListener("activate", function(event){
-  event.waitUntil(
-    caches.keys().then(function(cacheNames){
-      return Promise.all(
-        cacheNames.map(function(cacheName){
-        	if(cacheName.startsWith("mark-muthii-cache-") && cacheName !== CACHE_NAME){
-        		console.log('[ServiceWorker] Removing Cached Files from Cache - ', cacheName);
-        		return caches.delete(cacheName);
-        	}else{
-        		console.log('Else- ', cacheName);
-        	}
-        })
-      );
-    })
-  );
+self.addEventListener('install', (event)=>{
+	event.waitUntil(
+		cache.open(CACHE_NAME).then((cache)=>{
+			adderall.addAll(cache, immutableFiles, mutableFiles);
+		})
+	);
 });
 
 self.addEventListener('fetch', function(event) {
   event.respondWith(
-    caches.match(event.request)
-    .then(function(response) {
-      if (response) {
-        console.log('[*] Serving cached: ' + event.request.url);
-        return response;
-      }
-      console.log('[*] Fetching: ' + event.request.url);
-      return fetch(event.request);
+    fetch(event.request).catch(function() {
+      return caches.match(event.request).then(function(response) {
+        if (response) {
+          return response;
+        } else if (event.request.headers.get('accept').includes('text/html')) {
+          return caches.match('/offline-index.html');
+        }
+      });
     })
   );
+});
+
+self.addEventListener('activate', (event)=>{
+	event.waitUntil(
+		caches.keys().then((cacheNames)=>{
+			return Promise.all(
+				cacheNames.map((cacheName)=>{
+					if(cacheName !== CACHE_NAME && cacheName.startsWith('mark-muthii')){
+        		console.log('[ServiceWorker] Removing Cached Files from Cache - ', cacheName);
+						return caches.delete(cacheName);
+					}
+				})
+			);
+		})
+	);
 });
