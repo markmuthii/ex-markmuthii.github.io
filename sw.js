@@ -4,7 +4,7 @@ layout: null
 //lazy script for simplifying the add to cache event, by Tal Alter (www.talalter.com/adderall)
 // importScripts('https://cdnjs.cloudflare.com/ajax/libs/cache.adderall/1.0.0/cache.adderall.js');
 // cache version - change it with every change in the static files
-var CACHE_NAME = 'mark-muthii-v4';
+var CACHE_NAME = 'mark-muthii-v1';
 // files that keep changing. Fetched from the network with each sw update
 var cacheFiles = [
 	'/articles/',
@@ -41,7 +41,7 @@ var cacheFiles = [
 
 self.addEventListener('install', (event)=>{
 	event.waitUntil(
-		cache.open(CACHE_NAME).then((cache)=>{
+		caches.open(CACHE_NAME).then((cache)=>{
 			return cache.addAll(cacheFiles);
 		})
 	);
