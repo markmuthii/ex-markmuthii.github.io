@@ -17,7 +17,6 @@ var cacheFiles = [
 		{% endif %}
 	{% endfor %}
 	"/favicon.ico",
-	"/fav.png",
 	{% for post in site.posts %}
 		"{{ post.url }}",
 	{% endfor %}
