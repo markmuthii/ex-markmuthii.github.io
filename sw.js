@@ -74,7 +74,7 @@ self.addEventListener("fetch", (event)=>{
       console.log("[*] Fetching: " + event.request.url);
       return fetch(event.request);
     })
-  );
+  )
 });
 
 self.addEventListener("activate", (event)=>{
@@ -89,5 +89,5 @@ self.addEventListener("activate", (event)=>{
 				})
 			);
 		})
-	);
+	)
 });
