@@ -2,13 +2,12 @@
 layout: null
 ---
 //lazy script for simplifying the add to cache event, by Tal Alter (www.talalter.com/adderall)
-importScripts('https://cdnjs.cloudflare.com/ajax/libs/cache.adderall/1.0.0/cache.adderall.js');
+// importScripts('https://cdnjs.cloudflare.com/ajax/libs/cache.adderall/1.0.0/cache.adderall.js');
 // cache version - change it with every change in the static files
-var CACHE_NAME = 'mark-muthii-v3.1';
+var CACHE_NAME = 'mark-muthii-v4';
 // files that keep changing. Fetched from the network with each sw update
 var cacheFiles = [
 	'/articles/',
-	// images stored in img folder only
 	{% for file in site.static_files %}
 		{% if file.path contains '/img' %}
 			{% if file.path contains '/assets'%}
@@ -19,13 +18,9 @@ var cacheFiles = [
 	{% endfor %}
 	'/favicon.ico',
 	'/fav.png',
-
-	// blog posts
 	{% for post in site.posts %}
 		'{{ post.url }}',
 	{% endfor %}
-
-	// Stylesheets
   '/assets/vendor/bootstrap/css/bootstrap.min.css',
   '/assets/main.css',
   '/assets/vendor/css/prism.css',
@@ -33,8 +28,6 @@ var cacheFiles = [
   'https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800',
   'https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic',
   'https://fonts.gstatic.com/s/lora/v12/0QIgMX1D_JOuO7HeNtxumg.woff2',
-
-  // JS Files
   '/assets/vendor/jquery/jquery.min.js',
   '/assets/vendor/bootstrap/js/bootstrap.bundle.min.js',
   '/assets/vendor/startbootstrap-clean-blog/js/clean-blog.min.js',
@@ -42,7 +35,6 @@ var cacheFiles = [
   '/assets/vendor/js/prism.js',
   '/assets/vendor/js/custom.js',
   '/assets/vendor/startbootstrap-clean-blog/js/jqBootstrapValidation.js',
-
 	'/contact',
 	'/'
 ];
