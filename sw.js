@@ -6,12 +6,8 @@ importScripts('https://cdnjs.cloudflare.com/ajax/libs/cache.adderall/1.0.0/cache
 // cache version - change it with every change in the static files
 var CACHE_NAME = 'mark-muthii-v3';
 // files that keep changing. Fetched from the network with each sw update
-var mutableFiles = [
+var cacheFiles = [
 	'/articles/',
-
-];
-// static files. Fetched from cache, if one is added, it is fetched from network
-var staticFiles = [
 	// images stored in img folder only
 	{% for file in site.static_files %}
 		{% if file.path contains '/img' %}
@@ -54,7 +50,7 @@ var staticFiles = [
 self.addEventListener('install', (event)=>{
 	event.waitUntil(
 		cache.open(CACHE_NAME).then((cache)=>{
-			adderall.addAll(cache, immutableFiles, mutableFiles);
+			return cache.addAll(cacheFiles);
 		})
 	);
 });
