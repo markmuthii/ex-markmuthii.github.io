@@ -3,7 +3,7 @@ layout: default
 ---
 <!-- Page Header -->
 {% if page.background %}
-<div class="page-header header-filter" data-parallax="true" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}');">
+<div class="page-header header-filter" data-parallax="true" style="background-image: url('{{ page.background | prepend: site.url | replace: '//', '/' }}');">
   <div class="container">
     <div class="row">
       <div class="col-md-12 col-lg-10">

@@ -1,24 +1,24 @@
 <!--   Core JS Files   -->
-<script src="{{"/assets/vendor/material-kit/js/core/jquery.min.js" | relative_url }}"></script>
-<script src="{{"/assets/vendor/material-kit/js/core/popper.min.js" | relative_url }}"></script>
-<script src="{{"/assets/vendor/material-kit/js/core/bootstrap-material-design.min.js" | relative_url }}"></script>
-<script src="{{"/assets/vendor/material-kit/js/plugins/moment.min.js" | relative_url }}" ></script>
+<script src="{{"/assets/vendor/material-kit/js/core/jquery.min.js" | prepend:site.url }}"></script>
+<script src="{{"/assets/vendor/material-kit/js/core/popper.min.js" | prepend:site.url }}"></script>
+<script src="{{"/assets/vendor/material-kit/js/core/bootstrap-material-design.min.js" | prepend:site.url }}"></script>
+<script src="{{"/assets/vendor/material-kit/js/plugins/moment.min.js" | prepend:site.url }}" ></script>
 <!--  Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
-<!-- <script src="{{"/assets/vendor/material-kit/js/plugins/bootstrap-datetimepicker.js" | relative_url }}"></script> -->
+<!-- <script src="{{"/assets/vendor/material-kit/js/plugins/bootstrap-datetimepicker.js" | prepend:site.url }}"></script> -->
 <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
-<script src="{{"/assets/vendor/material-kit/js/plugins/nouislider.min.js" | relative_url }}"></script>
+<script src="{{"/assets/vendor/material-kit/js/plugins/nouislider.min.js" | prepend:site.url }}"></script>
 <!-- Control Center for Now Ui Kit: parallax effects, scripts for the example pages etc -->
-<script src="{{"/assets/vendor/material-kit/js/material-kit.js?v=2.0.3" | relative_url }}"></script>
+<script src="{{"/assets/vendor/material-kit/js/material-kit.js?v=2.0.3" | prepend:site.url }}"></script>
 
-<!-- <script src="{{"/assets/scripts.js" | relative_url }}"></script> -->
+<!-- <script src="{{"/assets/scripts.js" | prepend:site.url }}"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
-<script src="{{"/assets/vendor/js/prism.js" | relative_url }}"></script>
-<script src="{{"/assets/vendor/js/custom.js" | relative_url }}"></script>
-<script src="{{"/assets/vendor/js/csspreload.js" | relative_url }}"></script>
+<script src="{{"/assets/vendor/js/prism.js" | prepend:site.url }}"></script>
+<script src="{{"/assets/vendor/js/custom.js" | prepend:site.url }}"></script>
+<script src="{{"/assets/vendor/js/csspreload.js" | prepend:site.url }}"></script>
 
 {% if page.url contains 'contact' %}
   <!-- Form Validation -->
-  <script src="{{"/assets/vendor/material-kit/js/jqBootstrapValidation.js" | relative_url }}"></script>
+  <script src="{{"/assets/vendor/material-kit/js/jqBootstrapValidation.js" | prepend:site.url }}"></script>
   <!-- Send Form -->
   <script>
     $(function () {
