@@ -13,10 +13,9 @@ var cacheFiles = [
 		"{{ post.url }}",
 	{% endfor %}
   "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css",
-  "/assets/scripts.js",
   "/assets/vendor/js/prism.js",
   "/assets/vendor/js/custom.js",
-  "/assets/vendor/startbootstrap-clean-blog/js/jqBootstrapValidation.js",
+  "/assets/vendor/material-kit/js/jqBootstrapValidation.js",
 	"/contact",
 	"/"
 ];
