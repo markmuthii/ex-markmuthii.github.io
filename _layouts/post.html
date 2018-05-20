@@ -1,64 +1,80 @@
 ---
 layout: default
 ---
-
 <!-- Page Header -->
 {% if page.background %}
-<header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
-{% else %}
-<header class="masthead" id="masthead">
-{% endif %}
-  <div class="overlay"></div>
+<div class="page-header header-filter" data-parallax="true" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}');">
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
-        <div class="post-heading">
-          <h1>{{ page.title }}</h1>
-          {% if page.subtitle %}
-          <h2 class="subheading">{{ page.subtitle }}</h2>
-          {% endif %}
-          <span class="meta">Posted by 
-            {% if post.author %}
-              {{ post.author }}
-            {% else %}
-              {{ site.author }}
-            {% endif %} 
-          on {{ page.date | date: '%B %d, %Y' }}</span>
+      <div class="col-md-12 col-lg-10">
+        <h1 class="title">{{ page.title }}</h1>
+        {% if page.subtitle %}
+          <h4 class="pageSubtitle">{{ page.subtitle }}</h4>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+{% else %}
+<div class="page-header header-filter" data-parallax="true" style="background-color: #2b2f3c;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-lg-10">
+        <h1 class="title">{{ page.title }}</h1>
+        {% if page.subtitle %}
+          <h4  class="pageSubtitle">{{ page.subtitle }}</h4>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+<div class="main main-raised">
+  <div class="profile-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <div class="profile">
+            <div class="avatar">
+              <img src="/img/me.jpg" alt="Mark Muthii" class="img-raised rounded-circle img-fluid">
+            </div>
+            <div class="name">
+              <h3 class="title">Mark Muthii</h3>
+                <h6>Designer</h6>
+                <a href="#pablo" class="btn btn-just-icon btn-link btn-dribbble"><i class="fa fa-dribbble"></i></a>
+                <a href="#pablo" class="btn btn-just-icon btn-link btn-twitter"><i class="fa fa-twitter"></i></a>
+                <a href="#pablo" class="btn btn-just-icon btn-link btn-pinterest"><i class="fa fa-pinterest"></i></a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</header>
-
-<div class="container">
-  <div class="row">
-    <div class="col-lg-8 col-md-10 mx-auto"> 
-      <div id="article-section">
-
-        {{ content }}
-
-        {% include social-share.html%}
-
+  <div class="container">
+    <div class="section">
+      <div class="row">
+        <div class="col-lg-9 col-md-8"> 
+          <div id="article-section">
+            {{ content }}
+            {% include social-share.html%}
+          </div>
+          <hr>
+          <div class="clearfix">
+            {% if page.previous.url %}
+              <a class="btn btn-primary float-left" href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.previous.title }}">&larr; Previous<span class="d-none d-md-inline"> Post</span></a>
+            {% endif %}
+            {% if page.next.url %}
+              <a class="btn btn-primary float-right" href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.next.title }}">Next<span class="d-none d-md-inline"> Post</span> &rarr;</a>
+            {% endif %}
+          </div>
+          {% if site.disqus.shortname %}
+            {% include disqus.html%}
+          {% endif %}
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <!-- THE SIDEBAR CONTENT GOES HERE -->
+        </div>
       </div>
-
-      <hr>
-
-      <div class="clearfix">
-        {% if page.previous.url %}
-          <a class="btn btn-primary float-left" href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.previous.title }}">&larr; Previous<span class="d-none d-md-inline"> Post</span></a>
-        {% endif %}
-        
-        {% if page.next.url %}
-          <a class="btn btn-primary float-right" href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.next.title }}">Next<span class="d-none d-md-inline"> Post</span> &rarr;</a>
-        {% endif %}
-      </div>
-
-      <hr>
-
-      {% if site.disqus.shortname %}
-        {% include disqus.html%}
-      {% endif %}
-      
     </div>
   </div>
 </div>

@@ -1,0 +1,92 @@
+---
+layout: default
+---
+
+<div class="page-header header-filter" data-parallax="true" style="background-image: url('/img/bg-index.jpg');">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9">
+        <h1 class="title">Hi. I'm Mark. Mark Muthii.</h1>
+        <h4 class="pageSubtitle">Every now and then, I write about the things that interest me. Programming. Business. Psychology. Life. Just to mention a few. I welcome you to have a look.</h4>
+        <br>
+				<a href="#" class="btn btn-primary btn-raised" data-toggle="modal" data-target="#signUpModal">Never Miss a Post</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="main main-raised">
+  <div class="container">
+    <div class="section">
+      <div class="row">
+        <div class="col-lg-9 col-md-8"> 
+          <div id="article-section">
+
+            {{ content }}
+
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <!-- THE SIDEBAR CONTENT GOES HERE -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="signUpModal" tabindex="-1" role="">
+  <div class="modal-dialog modal-dialog-centered modal-login" role="document">
+    <div class="modal-content">
+      <div class="card card-signup card-plain">
+        <div class="modal-header">
+          <div class="card-header card-header-primary text-center">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="material-icons">clear</i> </button>
+            <h4 class="card-title">Sign Up To My Mailing List</h4>
+          </div>
+        </div>
+        <div class="modal-body">
+          <div class="formBody" id="formBody">
+            <form class="form" id="mc-update-list-form" method="GET" action="https://markmuthii.us17.list-manage.com/subscribe/post-json?u=b79fec44acc8303d8bb79e127&id=dab3193fee&c=?">
+            	<!-- <input type="hidden" name="u" value="b79fec44acc8303d8bb79e127">
+      				<input type="hidden" name="id" value="dab3193fee"> -->
+
+              <p class="description" id="mc-text">I send out periodic emails to ensure that you never miss an update. Also, some freebies will be coming your way quite frequently ;)</p>
+              <div class="card-body">
+
+                <div class="form-group bmd-form-group">
+                  <div class="input-group">
+                    <span class="input-group-addon">
+                        <i class="material-icons">face</i> 
+                    </span>
+                    <input type="text" class="form-control" placeholder="First Name..." name="MERGE1" id="mc-blog-update-MERGE1" value="" size="25">
+                  </div>
+                </div>
+
+                <div class="form-group bmd-form-group">
+                  <div class="input-group">
+                    <span class="input-group-addon">
+                        <i class="material-icons">email</i>
+                    </span>
+                    <input type="email" class="form-control" placeholder="Your Best Email..." name="MERGE0" id="mc-blog-update-MERGE0" size="25" value="" autocapitalize="off" autocorrect="off">
+                  </div>
+                </div>
+
+              </div>
+              <p class="gdpr-legal" id="mc-text-legal">You can change your mind at any time by clicking the unsubscribe link in the footer of any email you receive from me, or by contacting me at mark@muthii.me. I will treat your information with respect. For more information about our privacy practices please visit our <a href="https://mark.muthii.me/privacy-policy" target="_blank">Privacy Policy</a>. By clicking below, you agree that we may process your information in accordance with these terms.</p>
+              <br>
+              <div id="mc-gdpr">
+            		<a href="https://www.mailchimp.com/gdpr" target="_blank">
+            			<img src="https://cdn-images.mailchimp.com/icons/mailchimp-gdpr.svg" style="width: 10%;float: left;" alt="GDPR">
+            		</a>
+            		<p style="width: 90%;float: right;">We use MailChimp as our email platform. By clicking below to submit this form, you acknowledge that the information you provide will be transferred to MailChimp for processing in accordance with their <a href="https://mailchimp.com/legal/privacy/" target="_blank">Privacy Policy</a> and <a href="https://mailchimp.com/legal/terms/" target="_blank">Terms</a>.</p>
+              </div>
+              <br>	
+              <br>
+              <input type="submit" class="btn btn-primary btn-raised" name="submit" id="mc-update-list-subscribe" value="Yeah sure! I want the updates!">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>	
+  </div>
+</div>

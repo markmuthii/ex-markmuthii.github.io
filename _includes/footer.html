@@ -1,54 +1,37 @@
 <!-- Footer -->
-
-<hr>
-
-<footer>
+<!-- <hr> -->
+<footer class="footer footer-default">
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
-        <ul class="list-inline text-center">
-          {% if site.twitter_username %}
-          <li class="list-inline-item">
-            <a href="https://www.twitter.com/{{ site.twitter_username }}">
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
-          {% endif %}
-          {% if site.facebook_username %}
-          <li class="list-inline-item">
-            <a href="https://www.facebook.com/{{ site.facebook_username }}">
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
-          {% endif %}
-          {% if site.ig_username %}
-          <li class="list-inline-item">
-            <a href="https://www.instagram.com/{{ site.ig_username }}">
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
-          {% endif %}
-          {% if site.github_username %}
-          <li class="list-inline-item">
-            <a href="https://github.com/{{ site.github_username }}">
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
-          {% endif %}
-        </ul>
-        <p class="copyright text-muted">Copyright &copy; {{ 'now' | date: "%Y" }}, {{ site.author }} </p>
+      <div class="col-md-6">
+        <nav>
+          <ul>
+            <li>
+              <a href="https://markmuthii.com">
+                Home Page
+              </a>
+            </li>
+            <li>
+              <a href="https://mark.muthii.me">
+                Blog Home
+              </a>
+            </li>
+            <li>
+              <a href="https://mark.muthii.me/articles/">
+                Blog
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="col-md-6">
+        <div class="copyright">
+          &copy;
+          <script>
+            document.write(new Date().getFullYear())
+          </script>, made with <i class="material-icons" style="color: #ff0000;">favorite</i> by
+          <a href="https://markmuthii.com" target="_blank">Mark Muthii</a>.
+        </div>
       </div>
     </div>
   </div>

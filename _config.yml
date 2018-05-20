@@ -20,8 +20,24 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
 
+collections:
+  days:
+    output:        true
+    permalink:     /100DOC/R1/:name
+
 #Disqus Comments
 disqus:
   # Leave shortname blank to disable comments site-wide.
   # Disable comments for any post by adding `comments: false` to that post's YAML Front Matter.
-  shortname:        markmuthii
+  shortname:
+
+#Compress Layout Settings
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
+  ignore:
+    envs: [local]
+  blanklines: false
+  profile: false
+  startings: [html, head, body]

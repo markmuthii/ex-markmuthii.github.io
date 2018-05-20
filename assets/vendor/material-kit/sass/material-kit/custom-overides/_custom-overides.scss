@@ -1,0 +1,26 @@
+a {
+	h2.post-title{
+		text-decoration: underline; 
+	}
+	h2.post-title:hover{
+		text-decoration: none; 
+	}
+}
+.copyright a:hover {
+	text-decoration: underline;
+}
+
+.modal .modal-header .close i {
+	padding-right: 5px;
+}
+
+#mc-text-legal, 
+#mc-gdpr p {
+	font-size: 14px;
+	line-height: 1.5em;
+}
+
+.header-overlay {
+	min-height: 100vh;
+	background-color: rgba(0,0,0,.5);
+}

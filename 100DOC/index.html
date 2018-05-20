@@ -1,0 +1,14 @@
+---
+layout: page
+title: 100 Days Of Code
+description: "My journey with the 100 Days Of Code challenge."
+---
+
+{% for day in site.days %}
+	<div>{{ day.url }}</div>
+	<div>{{ day.title }}</div>
+
+	<a href="{{ day.url | prepend: site.baseurl | replace: '//', '/' }}">
+    <h2 class="post-title">{{ day.title }}</h2>
+  </a>
+{% endfor %}

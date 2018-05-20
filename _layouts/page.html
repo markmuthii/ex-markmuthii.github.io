@@ -1,34 +1,49 @@
 ---
 layout: default
 ---
-
-<!-- Page Header -->
 {% if page.background %}
-<header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
-{% else %}
-<header class="masthead" id="masthead">
-{% endif %}
-  <div class="overlay"></div>
+<div class="page-header header-filter" data-parallax="true" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}');">
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
-        <div class="page-heading">
-          <h1>{{ page.title }}</h1>
-          {% if page.description %}
-            <span class="subheading">{{ page.description }}</span>
-          {% endif %}
-        </div>
+      <div class="col-md-12 col-lg-10">
+        <h1 class="title">{{ page.title }}</h1>
+        {% if page.subtitle %}
+          <h4 class="pageSubtitle">{{ page.subtitle | default: page.description }}</h4>
+        {% endif %}
       </div>
     </div>
   </div>
-</header>
+</div>
+{% else %}
+<div class="page-header header-filter" data-parallax="true" style="background-color: #2b2f3c;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-lg-10">
+        <h1 class="title">{{ page.title }}</h1>
+        {% if page.subtitle %}
+          <h4  class="pageSubtitle">{{ page.subtitle | default: page.description }}</h4>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
 
-<div class="container">
-  <div class="row">
-    <div class="col-lg-8 col-md-10 mx-auto">
+<div class="main main-raised">
+  <div class="container">
+    <div class="section">
+      <div class="row">
+        <div class="col-lg-9 col-md-8"> 
+          <div id="article-section">
 
-      {{ content }}
+            {{ content }}
 
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <!-- THE SIDEBAR CONTENT GOES HERE -->
+        </div>
+      </div>
     </div>
   </div>
 </div>
