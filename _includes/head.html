@@ -25,7 +25,6 @@
   <meta name="description" content="{{ page.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
   <meta name="date" content="{{ page.date | default: 2018-03-04}}">
   <meta name="category" content="{{ page.category }}">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | prepend: site.url }}">
 
@@ -34,6 +33,10 @@
   <!-- <style type="text/css">
     {% include fonts.css %}
   </style> -->
+  <link rel="preload" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" as="style" onload="this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </noscript>
   <link rel="preload" href="https://fonts.googleapis.com/css?family=Merriweather:200,300,300i,400,400i,700,700i,900,900i" as="style" onload="this.rel='stylesheet'">
   <noscript>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:200,300,300i,400,400i,700,700i,900,900i">
@@ -69,6 +72,7 @@
     {% include prism.css%}
   </style> -->
   {% else %}
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="{{"/assets/main.css" | prepend: site.url }}">
   <link rel="stylesheet" href="{{"/assets/vendor/css/prism.css" | prepend: site.url }}">
   <link href="https://fonts.googleapis.com/css?family=Merriweather:200,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
@@ -76,5 +80,5 @@
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   {% endif %}
   
-  
+
 </head>
