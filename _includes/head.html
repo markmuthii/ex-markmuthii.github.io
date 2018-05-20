@@ -38,7 +38,14 @@
     {% endcapture %}
     {{ main-scss | scssify }}
   </style> -->
-  <link rel="stylesheet" href="{{"/assets/main.css" | relative_url }}">
+  <!-- <link rel="stylesheet" href="{{"/assets/main.css" | relative_url }}"> -->
+
+  
+  <!-- Asynchronous CSS loading -->
+  <link rel="preload" href="{{"/assets/main.css" | relative_url }}" as="style" onload="this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="{{"/assets/main.css" | relative_url }}">
+  </noscript>
   <style type="text/css">
     {% include prism.css%}
   </style>

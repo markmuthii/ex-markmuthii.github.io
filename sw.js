@@ -15,6 +15,7 @@ var cacheFiles = [
   "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css",
   "/assets/vendor/js/prism.js",
   "/assets/vendor/js/custom.js",
+  "/assets/vendor/js/csspreload.js",
   "/assets/vendor/material-kit/js/jqBootstrapValidation.js",
 	"/contact",
 	"/"
