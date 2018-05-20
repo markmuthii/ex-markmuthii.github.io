@@ -25,9 +25,6 @@
   <meta name="description" content="{{ page.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
   <meta name="date" content="{{ page.date | default: 2018-03-04}}">
   <meta name="category" content="{{ page.category }}">
-  
-  
-
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
@@ -36,10 +33,10 @@
     {% include fonts.css %}
   </style>
   <style type="text/css">
-    {% capture include_to_scssify %}
+    {% capture main-scss %}
       {% include main.scss %}
     {% endcapture %}
-    {{ include_to_scssify | scssify }}
+    {{ main-scss | scssify }}
   </style>
   <style type="text/css">
     {% include prism.css%}
