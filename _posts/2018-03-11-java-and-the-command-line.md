@@ -160,7 +160,7 @@ For this part, please proceed with **caution**.
 
 For the new settings to take effect, restart the terminal.
 
-## Interpreting/Further compiling our java code
+## Interpreting / Further compiling our java code
 
 Ensure that you are in the `sandbox` working directory by using the command:
 
