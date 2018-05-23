@@ -13,9 +13,8 @@ var cacheFiles = [
 		"{{ post.url }}",
 	{% endfor %}
   "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css",
-  "/assets/vendor/js/prism.js",
-  "/assets/vendor/js/custom.js",
-  "/assets/vendor/js/csspreload.js",
+  "assets/vendor/js/main.min.js",
+  "assets/vendor/js/post.min.js",
   "/assets/vendor/material-kit/js/jqBootstrapValidation.js",
 	"/contact",
 	"/"
@@ -29,21 +28,6 @@ self.addEventListener("install", (event)=>{
 		})
 	)
 });
-
-// self.addEventListener("fetch", function(event) {
-//   event.respondWith(
-//     fetch(event.request).catch(function() {
-//       return caches.match(event.request).then(function(response) {
-//         if (response) {
-//           return response;
-//         } else if (event.request.headers.get("accept").includes("text/html")) {
-//           return caches.match("/offline-index.html");
-//         }
-//       });
-//     })
-//   );
-// });
-
 
 self.addEventListener("fetch", (event)=>{
   event.respondWith(
