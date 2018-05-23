@@ -39,5 +39,9 @@ gulp.task('copy', function() {
 
 })
 
+gulp.task('hello', ()=>{
+  console.log('Hola Mark!');
+})
+
 // Default task
 gulp.task('default', ['copy']);
