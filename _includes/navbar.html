@@ -20,29 +20,34 @@
             <i class="material-icons">home</i> Home
           </a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link" href="{{"/articles/" | relative_url }}">
             <i class="material-icons">library_books</i> Articles
           </a>
-        </li>
+        </li> -->
         <li class="nav-item">
           <a class="nav-link" href="{{"/contact" | relative_url }}">
             <i class="material-icons">forum</i> Contact Me
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://twitter.com/muthiimm" target="_blank" data-original-title="Follow me on Twitter">
+          <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://twitter.com/{{ site.twitter_username}}" target="_blank" data-original-title="Follow me on Twitter">
             <i class="fa fa-twitter"></i>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://www.facebook.com/MarkMuthiiM" target="_blank" data-original-title="Like my page on Facebook">
+          <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://www.facebook.com/{{site.facebook_username}}" target="_blank" data-original-title="Like my page on Facebook">
             <i class="fa fa-facebook-square"></i>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://www.instagram.com/markmuthii" target="_blank" data-original-title="Follow me on Instagram">
+          <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://www.instagram.com/{{site.ig_username}}" target="_blank" data-original-title="Follow me on Instagram">
             <i class="fa fa-instagram"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://github.com/{{site.github_username}}" target="_blank" data-original-title="Follow me on Github">
+            <i class="fa fa-github"></i>
           </a>
         </li>
       </ul>

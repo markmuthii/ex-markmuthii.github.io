@@ -1,13 +1,5 @@
-a {
-	h2.post-title{
-		text-decoration: underline; 
-	}
-	h2.post-title:hover{
-		text-decoration: none; 
-	}
-}
-.copyright a:hover {
-	text-decoration: underline;
+body {
+	color: #000000;
 }
 
 .modal .modal-header .close i {
@@ -23,4 +15,57 @@ a {
 .header-overlay {
 	min-height: 100vh;
 	background-color: rgba(0,0,0,.5);
+}
+
+#article-section {
+	p {
+		font-size: 17px;
+		line-height: 1.8;
+		text-align: justify;
+		// color: #000000;
+	}
+	p.post-meta {
+		font-size: 14px;
+		font-weight: 200;
+	}
+	a {
+		text-decoration: underline;
+	}
+	a:hover {
+		text-decoration: none;
+	}
+	ul, ol {
+		font-size: 17px;
+		text-align: justify;
+	}
+
+}
+
+article {
+	a {
+		h2.post-title{
+			font-weight: 700;
+			text-decoration: underline; 
+		}
+		h2.post-title:hover{
+			text-decoration: none; 
+		}
+	}
+	h3.post-subtitle {
+		font-size: 1.3em;
+		font-weight: 300;
+		margin-top: 0;
+	}
+}
+
+article.card {
+	padding: 20px;
+}
+
+.margin-left-icon {
+	margin-left: 10px;
+}
+
+.copyright a:hover {
+	text-decoration: underline;
 }

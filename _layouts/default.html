@@ -16,7 +16,9 @@ layout: compress
 
     {% include footer.html %}
 
-    {% include sw.html %}
+		{% if jekyll.environment == 'production'%}
+    	{% include sw.html %}
+		{% endif %}
 
     {% include scripts.html %}
 

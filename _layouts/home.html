@@ -3,33 +3,78 @@ layout: homepage
 ---
 
 
+<!-- {% for post in paginator.posts %}
 
-{% for post in site.posts limit : 5 %}
-
-  <article class="post-preview">
+  <article class="card">
     <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
       <h2 class="post-title">{{ post.title }}</h2>
     </a>
-      {% if post.subtitle %}
-        <h3 class="post-subtitle">{{ post.subtitle }}</h3>
-      {% else %}
-        <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
-      {% endif %}
+    {% if post.subtitle %}
+      <h3 class="post-subtitle">{{ post.subtitle }}</h3>
+    {% else %}
+      <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
+    {% endif %}
     
-    <p class="post-meta">Posted by
+    <p class="post-meta"><i class="fa fa-user-circle"></i>
       {% if post.author %}
         {{ post.author }}
       {% else %}
         {{ site.author }}
       {% endif %}
-      on
-      {{ post.date | date: '%B %d, %Y' }}</p>
+        <i class="fa fa-calendar"></i> 
+      {{ post.date | date: '%B %d, %Y' }}
+    </p>
+  </article>
+ -->
+  <!-- <hr> -->
+
+<!-- {% endfor %} -->
+
+<!-- <div class="clearfix">
+  <a class="btn btn-primary float-right" href="{{"/articles" | relative_url }}">View All Posts &rarr;</a>
+</div> -->
+
+
+{% for post in paginator.posts %}
+
+  <article class="card">
+    <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+      <h2 class="post-title">{{ post.title }}</h2>
+    </a>
+    {% if post.subtitle %}
+      <h3 class="post-subtitle">{{ post.subtitle }}</h3>
+    {% else %}
+      <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
+    {% endif %}
+    
+    <p class="post-meta"><i class="fa fa-user-circle"></i>
+      {% if post.author %}
+        {{ post.author }}
+      {% else %}
+        {{ site.author }}
+      {% endif %}
+        <i class="fa fa-calendar margin-left-icon"></i> 
+      {{ post.date | date: '%B %d, %Y' }}
+    </p>
   </article>
 
-  <hr>
+  <!-- <hr> -->
 
 {% endfor %}
 
-<div class="clearfix">
-  <a class="btn btn-primary float-right" href="{{"/articles" | relative_url }}">View All Posts &rarr;</a>
-</div>
+<!-- Pager -->
+{% if paginator.total_pages > 1 %}
+
+  <div class="clearfix">
+
+    {% if paginator.previous_page %}
+      <a class="btn btn-primary float-left" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer<span class="d-none d-md-inline"> Posts</span></a>
+    {% endif %}
+
+    {% if paginator.next_page %}
+      <a class="btn btn-primary float-right" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older<span class="d-none d-md-inline"> Posts</span> &rarr;</a>
+    {% endif %}
+
+  </div>
+
+{% endif %}

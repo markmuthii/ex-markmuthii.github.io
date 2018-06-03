@@ -14,8 +14,8 @@ ig_username:       markmuthii
 
 # Build settings
 markdown:          kramdown
-paginate:          10
-paginate_path:     "/articles/page:num/"
+paginate:          5
+paginate_path:     "/page:num/"
 plugins:
   - jekyll-feed
   - jekyll-paginate

@@ -7,7 +7,7 @@ layout: default
     <div class="row">
       <div class="col-md-12 col-lg-10">
         <h1 class="title">{{ page.title }}</h1>
-        {% if page.subtitle %}
+        {% if page.description %}
           <h4 class="pageSubtitle">{{ page.subtitle | default: page.description }}</h4>
         {% endif %}
       </div>
@@ -15,12 +15,12 @@ layout: default
   </div>
 </div>
 {% else %}
-<div class="page-header header-filter" data-parallax="true" style="background-color: #2b2f3c;">
+<div class="page-header header-filter" data-parallax="true" style="background-image: url('{{ site.url }}/img/mark-muthii-me-default-bg.jpg');"">
   <div class="container">
     <div class="row">
       <div class="col-md-12 col-lg-10">
         <h1 class="title">{{ page.title }}</h1>
-        {% if page.subtitle %}
+        {% if page.description %}
           <h4  class="pageSubtitle">{{ page.subtitle | default: page.description }}</h4>
         {% endif %}
       </div>
