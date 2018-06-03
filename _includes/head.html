@@ -50,20 +50,27 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons">
   </noscript>
   <style type="text/css">
+    {% capture main-scss %}
+      {% include main.scss %}
+    {% endcapture %}
+    {{ main-scss | scssify }}
+  </style>
+
+  <!-- <style type="text/css">
     {% capture inline-scss %}
       {% include inline.scss %}
     {% endcapture %}
     {{ inline-scss | scssify }}
-  </style>
+  </style> -->
 
   <!-- <link rel="stylesheet" href="{{"/assets/main.css" | prepend: site.url }}"> -->
 
   
   <!-- Asynchronous CSS loading -->
-  <link rel="preload" href="{{"/assets/main.css" | prepend: site.url }}" as="style" onload="this.rel='stylesheet'">
+  <!-- <link rel="preload" href="{{"/assets/main.css" | prepend: site.url }}" as="style" onload="this.rel='stylesheet'">
   <noscript>
     <link rel="stylesheet" href="{{"/assets/main.css" | prepend: site.url }}">
-  </noscript>
+  </noscript> -->
   <link rel="preload" href="{{"/assets/vendor/css/prism.css" | prepend: site.url }}" as="style" onload="this.rel='stylesheet'">
   <noscript>
     <link rel="stylesheet" href="{{"/assets/vendor/css/prism.css" | prepend: site.url }}">
