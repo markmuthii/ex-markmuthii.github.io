@@ -17,7 +17,7 @@ if(form.length > 0){
 			messagesArea.html(validateResult);
 		}
 	})
-}
+}	
 
 function validateMCForm(fName, email) {
 	var returnValue = 'valid';

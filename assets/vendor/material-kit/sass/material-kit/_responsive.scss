@@ -182,6 +182,11 @@
             margin-left: 0.1875px;
         }
     }
+    #article-section-home {
+      h3.post-subtitle {
+        font-size: 1.3em;
+      }
+    }
 }
 
 @media screen and (max-width: 991px) {
@@ -281,6 +286,26 @@
       line-height: 1.3em;
     }
   }
+
+  #article-section-home {
+    a {
+      h2.post-title {
+        font-size: 1.85em;
+      }
+    }
+    h3.post-subtitle {
+      font-size: 1.2em;
+      // font-size: 1.05em;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #article-section-home {
+    h3.post-subtitle {
+      font-size: 1.3em;
+    }
+  }
 }
 
 @media screen and (max-width: 400px){
@@ -305,5 +330,14 @@
     font-size: 2.15rem;
     line-height: 1.4em;
   }
-
+  #article-section-home {
+    a {
+      h2.post-title {
+        font-size: 1.55em;
+      }
+    }
+    h3.post-subtitle {
+      font-size: 1.1em;
+    }
+  }
 }

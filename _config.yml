@@ -5,6 +5,7 @@ author:            Mark Muthii
 baseurl:           ""
 url:               "https://mark.muthii.me"
 permalink:         :title
+future:            false
 
 # Social Profiles
 twitter_username:  markmuthii7
