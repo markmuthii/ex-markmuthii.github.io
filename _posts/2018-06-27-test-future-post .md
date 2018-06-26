@@ -2,7 +2,7 @@
 layout: post
 title:  "Here's to a New Beginning"
 subtitle: "And thus, my writing journey begun"
-date:   2018-03-04
+date:   2018-06-27
 background: '/img/posts/beginning.jpg'
 author: Mark Muthii
 description: "Hello World! As you might already know, I'm Mark Muthii, and this is my personal blog site. By day, I am a student, and by night, I am a programming freak who spends his hours banging on the keyboard keys."
