@@ -15,8 +15,7 @@ var cacheFiles = [
   "assets/vendor/js/main.min.js",
   "assets/vendor/js/post.min.js",
   "/assets/vendor/material-kit/js/jqBootstrapValidation.js",
-	"/contact",
-	"/"
+	"/contact"
 ];
 
 self.addEventListener("install", (event)=>{
