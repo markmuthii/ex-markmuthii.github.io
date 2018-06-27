@@ -8,7 +8,7 @@ simg:	'/img/posts/kali-logo-mark-muthii-me.png'
 author: Mark Muthii
 category: devops
 description: "In this first part of Hacking From the Cloud, I show you how to set up Kali Linux on Amazon Web Services."
-surlex:	
+surlex:	'2tGsBzf'
 ---
 
 Some time back, I got access to one of my good friend's gmail account. 
