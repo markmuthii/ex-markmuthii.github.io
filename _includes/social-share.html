@@ -1,7 +1,7 @@
 <div style="margin-top: 20px">Share on:</div>
   <ul class="list-inline text-left">
     <li class="list-inline-item">
-      <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | prepend: site.url }}" target="_blank">
+      <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.surlex | prepend: site.surl }}&text={{ page.title }}" target="_blank">
         <span class="fa-stack fa-sm">
           <i class="fa fa-circle fa-stack-2x"></i>
           <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
@@ -9,7 +9,7 @@
       </a>
     </li>
     <li class="list-inline-item">
-      <a href="https://twitter.com/intent/tweet?url={{ page.url | prepend: site.url }}" target="_blank">
+      <a href="https://twitter.com/intent/tweet?url={{ page.surlex | prepend: site.surl }}&text={{ page.title }}" target="_blank">
         <span class="fa-stack fa-sm">
           <i class="fa fa-circle fa-stack-2x"></i>
           <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>

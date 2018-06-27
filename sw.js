@@ -4,12 +4,11 @@ layout: null
 //lazy script for simplifying the add to cache event, by Tal Alter (www.talalter.com/adderall)
 // importScripts("https://cdnjs.cloudflare.com/ajax/libs/cache.adderall/1.0.0/cache.adderall.js");
 // cache version - change it with every change in the static files
-var CACHE_NAME = "mark-muthii-v1";
+var CACHE_NAME = "mark-muthii-v1.0000";
 // files that keep changing. Fetched from the network with each sw update
 var cacheFiles = [
-	"/articles/",
 	"/favicon.ico",
-	{% for post in site.posts limit : 3 %}
+	{% for post in site.posts limit : 1 %}
 		"{{ post.url }}",
 	{% endfor %}
   "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css",
