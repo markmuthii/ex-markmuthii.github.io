@@ -161,7 +161,7 @@ And what better way to test the Kali Linux install than through running one of t
 
 ## Wrapping Up
 
-So that, is how you start your path to hacking on the cloud. In the next part of this series, I will tackle a couple of scripts and tools that you can run on Kali to hack your way through the internet. 
+So that, is how you start your path to hacking on the cloud. In the <a href="https://mark.muthii.me/hacking-from-the-cloud-part-2-hacking-instagram-account-cupp-instagram-bruter" target="_blank">next part</a> of this series, I will tackle a couple of scripts and tools that you can run on Kali to hack your way through the internet. 
 
 I'm pretty sure there are other alternatives out there that offer free Kali installs on the cloud, and I would love to hear from you if you know of any. 
 
