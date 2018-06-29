@@ -1,5 +1,5 @@
 <!--   Core JS Files   -->
-<script src="{{"/assets/vendor/js/main.min.js" | prepend:site.url }}"></script>
+<script src="{{'/assets/vendor/js/main.min.js' | prepend:site.url }}"></script>
 <!-- <script src="{{"/assets/vendor/material-kit/js/core/jquery.min.js" | prepend:site.url }}"></script>
 <script src="{{"/assets/vendor/material-kit/js/core/popper.min.js" | prepend:site.url }}"></script> -->
 <!-- <script src="{{"/assets/vendor/material-kit/js/core/bootstrap-material-design.min.js" | prepend:site.url }}"></script> -->
@@ -16,7 +16,7 @@
 {% if page.layout == 'post'%}
 <!-- <script src="{{"/assets/vendor/js/clipboard.min.js" | prepend:site.url }}"></script>
 <script src="{{"/assets/vendor/js/prism.js" | prepend:site.url }}"></script> -->
-<script src="{{"/assets/vendor/js/post.min.js" | prepend:site.url }}"></script>
+<script src="{{'/assets/vendor/js/post.min.js' | prepend:site.url }}"></script>
 
 {% endif %}
 
@@ -25,7 +25,7 @@
 
 {% if page.url contains 'contact' %}
   <!-- Form Validation -->
-  <script src="{{"/assets/vendor/material-kit/js/jqBootstrapValidation.js" | prepend:site.url }}"></script>
+  <script src="{{'/assets/vendor/material-kit/js/jqBootstrapValidation.js' | prepend:site.url }}"></script>
   <!-- Send Form -->
   <script>
     $(function () {
