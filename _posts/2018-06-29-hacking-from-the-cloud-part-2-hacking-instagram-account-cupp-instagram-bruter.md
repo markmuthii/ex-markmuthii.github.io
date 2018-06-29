@@ -19,6 +19,8 @@ Please note, as a legal disclaimer, that this tutorial is for informational purp
 
 For this demonstration, I created a dummy Instagram account (which I'll probably delete afterwards).
 
+***Update:*** I decided to leave the account live, for now. I have changed the password though ;).
+
 <img class="img-fluid" src="../img/posts/hacking-ig-new-account.jpg" alt="Dummy Instagram Account"><span class="caption text-muted">My dummy IG account</span>
 
 Alright, let's get to it.
