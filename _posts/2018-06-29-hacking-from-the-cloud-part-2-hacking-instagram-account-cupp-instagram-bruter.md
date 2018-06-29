@@ -8,7 +8,7 @@ simg:	'/img/posts/kali-logo-mark-muthii-me.png'
 author: Mark Muthii
 category: devops
 description: "In this second part of Hacking From the Cloud, I show you how to hack an Instagram account using Kali hosted on the cloud."
-surlex:	false
+surlex:	'2IA7Z18'
 ---
 
 In the <a href="https://mark.muthii.me/hacking-from-the-cloud-part-1-setting-up-kali-linux-on-amazon-web-services" target="_blank">first part</a> of this series, Hacking From the Cloud, I covered how to set up Kali Linux on Amazon Web Services. If you haven't checked it out yet, do so before reading on. Unless, of course, you already have a Kali instance running somewhere.
