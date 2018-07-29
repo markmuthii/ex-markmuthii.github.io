@@ -8,7 +8,7 @@ simg:	'/img/posts/free-web-hosting-small.jpeg'
 author: Mark Muthii
 category: programming
 description: "Sometimes, all you need is a quick way to host and showcase your project, without having to pay for a web host. Let me show you how. Plus, get a free domain while you are at it."
-surlex:	''
+surlex:	'2AhJhnq'
 ---
 
 It's the third semester in school, and that means, it's project time.
