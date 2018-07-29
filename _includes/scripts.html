@@ -17,6 +17,17 @@
 <!-- <script src="{{"/assets/vendor/js/clipboard.min.js" | prepend:site.url }}"></script>
 <script src="{{"/assets/vendor/js/prism.js" | prepend:site.url }}"></script> -->
 <script src="{{'/assets/vendor/js/post.min.js' | prepend:site.url }}"></script>
+<script>
+  window.addEventListener("load", ()=>{
+    let a = document.getElementsByTagName("a");
+    for (var i = 0; i < a.length; i++) {
+      if (!a[i].hasAttribute("target")){
+        a[i].setAttribute("target", "_blank");
+      }
+    }
+    
+  });
+</script>
 
 {% endif %}
 
@@ -102,3 +113,5 @@
     });
   </script>
 {% endif %}
+
+

@@ -26,7 +26,7 @@
   <meta name="date"                 content="{{ page.date | default: 2018-03-04}}">
   <meta name="category"             content="{{ page.category }}">
   <link rel="canonical"             href="{{ page.url | replace:'index.html','' | absolute_url }}">
-  <link rel="alternate"             type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | prepend: site.url }}">
+  <link rel="alternate"             type="application/rss+xml" title="{{ site.title | escape }}" href="{{ '/feed.xml' | prepend: site.url }}">
 
 
   {% if jekyll.environment == 'production' %}
