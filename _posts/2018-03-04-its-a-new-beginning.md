@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Here's to a New Beginning"
+title:  "Here is to a New Beginning"
 subtitle: "And thus, my writing journey begun"
 date:   2018-03-04
 background: '/img/posts/beginning.jpg'

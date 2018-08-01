@@ -75,7 +75,7 @@ Else if (haha, get it?) you just want a host for demonstration (or learning), re
 
 ### 000Webhost
 
-000Webhost is the real deal when it comes to free hosting. For a free hosting provdider, I'd say they are doing quite well.
+000Webhost is the real deal when it comes to free hosting. For a free hosting provider, I'd say they are doing quite well.
 
 To get started with them, head on over to [000Webhost.com](https://www.000webhost.com/1089361.html) and create an account.
 
